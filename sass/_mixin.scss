@@ -1,0 +1,15 @@
+@mixin btn($paddingY: 10px, $paddingX: 20px, $color: $primary-color) {
+  color: $color;
+  border: 2px solid $color;
+  padding: $paddingY $paddingX;
+  &:hover {
+    background-color: $color;
+    color: white;
+  }
+}
+
+@mixin grid ($number, $gapRow, $gapColumn) {
+  display: grid;
+  grid-gap: $gapRow $gapColumn;
+  grid-template-columns: repeat($number, 1fr);
+}
